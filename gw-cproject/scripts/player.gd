@@ -1,25 +1,20 @@
 extends CharacterBody2D
 
-
+var nearby_interactable = null
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
-
-func _physics_process(delta: float) -> void:
-	
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Gets input direction (-1 to 1 for x and y)
-	var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
-	
-	# Sets velocity based on direction and speed
+func _physics_process(_delta: float) -> void:
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = direction * SPEED
-	
-	# Moves the character and handles collisions
 	move_and_slide()
+
+	if Input.is_action_just_pressed("Interact") and nearby_interactable != null:
+		if nearby_interactable.has_method("Interact"):
+			nearby_interactable.interact()
+
+func _on_interact_area_area_entered(area):
+	nearby_interactable = area.get_parent()
+
+func _on_interact_area_area_exited(area):
+	if nearby_interactable == area.get_parent():
+		nearby_interactable = null
