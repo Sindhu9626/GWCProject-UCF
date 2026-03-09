@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://d4agoqeoieumh"]
 
-[ext_resource type="Texture2D" uid="uid://bixpin30fqbx6" path="res://gui/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/Inventory_Blocks_Spritesheet.png" id="1_opkb6"]
+[ext_resource type="Texture2D" uid="uid://kro8leoc44l0" path="res://gui/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/inventory_slots.png" id="1_opkb6"]
 
 [node name="Slot" type="Panel" unique_id=899970889]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1.0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235530992]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1756916521]
 texture = ExtResource("1_opkb6")
-hframes = 2
-frame = 1
+vframes = 2
 region_enabled = true
-region_rect = Rect2(50, 50, 95, 45)
+region_rect = Rect2(56, 40.79023, 32, 61.331825)
