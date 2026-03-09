@@ -1,19 +1,9 @@
 [gd_scene format=3 uid="uid://cbbhu2iokqc54"]
 
 [ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://vy8ky3f2ywtj" path="res://scenes/coin.tscn" id="2_yqjtg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
-size = Vector2(1170, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
-size = Vector2(1150, 23)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
-size = Vector2(23, 666)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
-size = Vector2(18, 659)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+distance = 1.0
 
 [node name="Game" type="Node2D" unique_id=1534680098]
 
@@ -25,25 +15,6 @@ position = Vector2(-2, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=208307330]
 position = Vector2(0, 324)
-collision_layer = 2
-collision_mask = 0
 
-[node name="Bottomwall" type="CollisionShape2D" parent="StaticBody2D" unique_id=749804135]
-position = Vector2(-5, 0.5)
-shape = SubResource("RectangleShape2D_uwrxv")
-
-[node name="Topwall" type="CollisionShape2D" parent="StaticBody2D" unique_id=547459122]
-position = Vector2(-3, -642.5)
-shape = SubResource("RectangleShape2D_yqjtg")
-
-[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=906082593]
-position = Vector2(-581.5, -320)
-shape = SubResource("RectangleShape2D_lnu2h")
-
-[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1199745490]
-position = Vector2(571, -320.5)
-shape = SubResource("RectangleShape2D_lbhrr")
-
-[node name="Coin" parent="." unique_id=140732526 instance=ExtResource("2_yqjtg")]
-position = Vector2(205, -28)
-scale = Vector2(0.5, 0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=749804135]
+shape = SubResource("WorldBoundaryShape2D_uwrxv")
