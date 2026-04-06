@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b8n8ymqeuxmwv"]
+
+[ext_resource type="Texture2D" uid="uid://ry2jsah228yo" path="res://assets/craftpix-556112-free-crystals-2d-game-items/PNG/shiny/3.png" id="1_al1jy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h626q"]
+radius = 129.00388
+
+[node name="SceneTrigger" type="Area2D" unique_id=693164329]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=992891068]
+position = Vector2(8, 3)
+texture = ExtResource("1_al1jy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214636986]
+position = Vector2(6, -4)
+shape = SubResource("CircleShape2D_h626q")

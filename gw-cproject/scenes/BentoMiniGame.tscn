@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://csah7vty3ex7s"]
+
+[ext_resource type="Script" uid="uid://e0oxh7u70nu5" path="res://scripts/bento_mini_game.gd" id="1_x543b"]
+[ext_resource type="PackedScene" uid="uid://b8n8ymqeuxmwv" path="res://scenes/scene_trigger.tscn" id="2_5xprv"]
+[ext_resource type="Script" uid="uid://djlepgj1gr6ti" path="res://scenes/bentoToGame.gd" id="3_4steb"]
+[ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="4_b2waq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x543b"]
+size = Vector2(1153, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xprv"]
+size = Vector2(24, 657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vigpy"]
+size = Vector2(14, 628)
+
+[node name="BentoMiniGame" type="Node2D" unique_id=744442249]
+position = Vector2(562, 260)
+script = ExtResource("1_x543b")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=180159936]
+position = Vector2(-531, -260)
+metadata/_edit_lock_ = true
+
+[node name="SceneTrigger" parent="." unique_id=693164329 instance=ExtResource("2_5xprv")]
+position = Vector2(-1036, -524)
+script = ExtResource("3_4steb")
+
+[node name="Player" parent="." unique_id=810775942 instance=ExtResource("4_b2waq")]
+position = Vector2(-537, -156)
+
+[node name="MiniGame" type="Node2D" parent="." unique_id=1727871903]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1481953574]
+position = Vector2(0, 324)
+collision_layer = 2
+collision_mask = 0
+
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1418084463]
+position = Vector2(-526, -907)
+shape = SubResource("RectangleShape2D_x543b")
+
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=573915357]
+position = Vector2(-514, -267)
+shape = SubResource("RectangleShape2D_x543b")
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=2003128153]
+position = Vector2(-1097, -581)
+shape = SubResource("RectangleShape2D_5xprv")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1682123712]
+position = Vector2(41, -594)
+shape = SubResource("RectangleShape2D_vigpy")
+
+[connection signal="body_entered" from="SceneTrigger" to="SceneTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="SceneTrigger" to="SceneTrigger" method="_on_body_exited"]

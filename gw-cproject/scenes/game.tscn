@@ -1,26 +1,33 @@
 [gd_scene format=3 uid="uid://cbbhu2iokqc54"]
 
 [ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b8n8ymqeuxmwv" path="res://scenes/scene_trigger.tscn" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://ikobhc2ouv3n" path="res://scenes/scene_trigger.gd" id="2_lnu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
 size = Vector2(1153, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
-size = Vector2(14, 657)
+size = Vector2(24, 657)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
-size = Vector2(20, 628)
+size = Vector2(14, 628)
 
 [node name="Game" type="Node2D" unique_id=1534680098]
 
-[node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
-position = Vector2(3, 37)
+[node name="SceneTrigger" parent="." unique_id=693164329 instance=ExtResource("1_yqjtg")]
+script = ExtResource("2_lnu2h")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=346181841]
 position = Vector2(-2, 1)
 
+[node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
+position = Vector2(-274, -13)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=208307330]
 position = Vector2(0, 324)
+collision_layer = 2
+collision_mask = 0
 
 [node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=894350346]
 position = Vector2(2, -639)
@@ -31,9 +38,14 @@ position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1817431596]
-position = Vector2(-574, -318.5)
+position = Vector2(-569, -318.5)
 shape = SubResource("RectangleShape2D_yqjtg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=23757228]
-position = Vector2(578, -315)
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=23757228]
+position = Vector2(561, -315)
 shape = SubResource("RectangleShape2D_lnu2h")
+
+[connection signal="body_entered" from="SceneTrigger" to="SceneTrigger" method="_on_body_entered"]
+[connection signal="body_shape_exited" from="SceneTrigger" to="SceneTrigger" method="_on_body_shape_exited"]
+
+[editable path="SceneTrigger"]
