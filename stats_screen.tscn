@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://evqv3dhs0apy"]
+
+[ext_resource type="Texture2D" uid="uid://celjxjlqchx8b" path="res://assets/ipad_nobg.png" id="1_0qcln"]
+[ext_resource type="FontFile" uid="uid://t7ieandmb3dq" path="res://fonts/PixelifySans-Bold.ttf" id="2_js5kr"]
+[ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="3_6ydm6"]
+[ext_resource type="Texture2D" uid="uid://bghb0wa7lieeu" path="res://assets/page_bluelines.png" id="4_5bu4a"]
+[ext_resource type="Texture2D" uid="uid://bhg7a7e1tvpwx" path="res://assets/page_doodles.png" id="5_42aky"]
+[ext_resource type="Texture2D" uid="uid://bsfj4fp3tn6qb" path="res://assets/notebook_blue.png" id="6_4xip4"]
+
+[node name="Control" type="Control" unique_id=2141065146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1572584640]
+z_index = -10
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.054
+anchor_top = -0.035
+anchor_right = 1.052
+anchor_bottom = 1.074
+offset_left = 10.208
+offset_top = -9.32
+offset_right = 10.095947
+offset_bottom = -8.952026
+color = Color(0.60784316, 0.83137256, 0.89411765, 1)
+
+[node name="ipad" type="TextureRect" parent="." unique_id=1718191549]
+layout_mode = 0
+offset_left = 111.0
+offset_top = -67.0
+offset_right = 1040.0
+offset_bottom = 705.0
+texture = ExtResource("1_0qcln")
+
+[node name="bgcolor_white" type="ColorRect" parent="ipad" unique_id=866066941]
+z_index = -1
+layout_mode = 0
+offset_left = 58.0
+offset_top = 150.0
+offset_right = 872.0
+offset_bottom = 615.0
+
+[node name="stats title" type="Label" parent="ipad" unique_id=1608819287]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 157.0
+offset_right = 861.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_js5kr")
+theme_override_font_sizes/font_size = 45
+text = "-------- Statistics --------"
+horizontal_alignment = 1
+
+[node name="stats text" type="Label" parent="ipad" unique_id=1563621319]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 217.0
+offset_right = 858.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_6ydm6")
+theme_override_font_sizes/font_size = 35
+text = "test test test test test test"
+
+[node name="notebook1" type="TextureRect" parent="." unique_id=129954707]
+z_index = -2
+layout_mode = 0
+offset_left = 816.0
+offset_top = -33.0
+offset_right = 1197.0
+offset_bottom = 458.0
+rotation = -0.2146755
+texture = ExtResource("4_5bu4a")
+expand_mode = 1
+
+[node name="notebok2" type="TextureRect" parent="." unique_id=40945647]
+z_index = -2
+layout_mode = 0
+offset_left = 48.000008
+offset_top = 104.999985
+offset_right = 486.0
+offset_bottom = 628.0
+rotation = 0.12915437
+texture = ExtResource("4_5bu4a")
+expand_mode = 1
+
+[node name="doodle1" type="TextureRect" parent="." unique_id=816080199]
+z_index = -3
+layout_mode = 0
+offset_left = -171.0
+offset_top = 30.999985
+offset_right = 291.7404
+offset_bottom = 545.0679
+rotation = -0.5602507
+texture = ExtResource("5_42aky")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1720397370]
+z_index = -3
+layout_mode = 0
+offset_left = 404.99997
+offset_top = 380.0
+offset_right = 1248.0
+offset_bottom = 879.0
+rotation = -0.34557518
+texture = ExtResource("6_4xip4")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1499795526]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 551.0
+offset_right = 681.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("3_6ydm6")
+theme_override_font_sizes/font_size = 40
+text = "Home"

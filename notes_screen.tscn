@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cjb1gy4fmpe7s"]
+
+[ext_resource type="Texture2D" uid="uid://cpkf7djyxnk7q" path="res://assets/notebook_black.png" id="1_nvpii"]
+[ext_resource type="Texture2D" uid="uid://dl4gxyr08f58k" path="res://assets/page_scribbles.png" id="2_olo5m"]
+[ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="3_o1x8c"]
+[ext_resource type="FontFile" uid="uid://t7ieandmb3dq" path="res://fonts/PixelifySans-Bold.ttf" id="4_o1x8c"]
+[ext_resource type="FontFile" uid="uid://ckervbxo0pcfs" path="res://fonts/PixelifySans-Medium.ttf" id="5_olo5m"]
+[ext_resource type="Script" uid="uid://bhvtd5updbl3m" path="res://continue_button.gd" id="6_o1x8c"]
+
+[node name="Control" type="Control" unique_id=1373059897]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="." unique_id=1099505810]
+layout_mode = 0
+offset_left = -47.0
+offset_top = -26.0
+offset_right = 1202.0
+offset_bottom = 684.0
+color = Color(0.7372549, 0.61960787, 0.50980395, 1)
+
+[node name="notebook" type="TextureRect" parent="." unique_id=1787940211]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 24.0
+offset_right = 1080.0
+offset_bottom = 613.0
+texture = ExtResource("1_nvpii")
+expand_mode = 1
+
+[node name="scribbled_page" type="TextureRect" parent="notebook" unique_id=331307846]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 454.0
+offset_bottom = 576.0
+texture = ExtResource("2_olo5m")
+expand_mode = 1
+
+[node name="balck_bg" type="ColorRect" parent="notebook" unique_id=8369613]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 48.0
+offset_right = 966.0
+offset_bottom = 544.0
+color = Color(0.015686275, 0.015686275, 0, 0.77254903)
+
+[node name="note_text" type="Label" parent="notebook/balck_bg" unique_id=1733460997]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 104.0
+offset_right = 410.0
+offset_bottom = 481.0
+theme_override_fonts/font = ExtResource("3_o1x8c")
+theme_override_font_sizes/font_size = 25
+text = "test test test test test test test. test test, test. test test test"
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 6
+
+[node name="Label" type="Label" parent="notebook/balck_bg" unique_id=1497454879]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 408.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("4_o1x8c")
+theme_override_font_sizes/font_size = 45
+text = "Note 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue_button" type="Button" parent="." unique_id=1997795251]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 568.0
+offset_right = 648.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("5_olo5m")
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+script = ExtResource("6_o1x8c")
+
+[connection signal="pressed" from="continue_button" to="continue_button" method="on_continue_pressed"]
