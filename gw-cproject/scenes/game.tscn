@@ -8,7 +8,7 @@ distance = 1.0
 [node name="Game" type="Node2D" unique_id=1534680098]
 
 [node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
-position = Vector2(-1, 0)
+position = Vector2(3, 37)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=346181841]
 position = Vector2(-2, 1)
