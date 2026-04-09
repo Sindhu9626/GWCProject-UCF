@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://csah7vty3ex7s"]
+[gd_scene format=3 uid="uid://bp6g550oldgp8"]
 
-[ext_resource type="Script" uid="uid://e0oxh7u70nu5" path="res://scripts/bento_mini_game.gd" id="1_x543b"]
+[ext_resource type="Script" path="res://scripts/bento_mini_game.gd" id="1_x543b"]
 [ext_resource type="PackedScene" uid="uid://b8n8ymqeuxmwv" path="res://scenes/scene_trigger.tscn" id="2_5xprv"]
-[ext_resource type="Script" uid="uid://djlepgj1gr6ti" path="res://scenes/bentoToGame.gd" id="3_4steb"]
+[ext_resource type="Script" path="res://scenes/bentoToGame.gd" id="3_4steb"]
 [ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="4_b2waq"]
+[ext_resource type="PackedScene" uid="uid://c8e58ye63bl8i" path="res://scenes/enterAnswer.tscn" id="5_b2waq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x543b"]
 size = Vector2(1153, 18)
@@ -30,6 +31,9 @@ script = ExtResource("3_4steb")
 position = Vector2(-537, -156)
 
 [node name="MiniGame" type="Node2D" parent="." unique_id=1727871903]
+
+[node name="answerEnter" parent="." unique_id=1751888005 instance=ExtResource("5_b2waq")]
+position = Vector2(-236, -487)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1481953574]
 position = Vector2(0, 324)
