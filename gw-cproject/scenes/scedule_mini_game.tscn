@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bcu18t2pjlk4c"]
+
+[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="1_o6w8e"]
+[ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="2_k4ww7"]
+[ext_resource type="Texture2D" uid="uid://dnlj0ti0a4xge" path="res://assets/puzzle_assets/text_messages.png" id="3_mm7ok"]
+[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="4_k4ww7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grw1g"]
+size = Vector2(1153, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uleb"]
+size = Vector2(24, 657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4ww7"]
+size = Vector2(14, 628)
+
+[node name="SceduleMiniGame" type="Node2D" unique_id=519595935]
+position = Vector2(-14, 318)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=324343897]
+offset_left = -1103.0
+offset_top = -259.0
+offset_right = 28.0
+offset_bottom = 371.0
+color = Color(0.5724409, 0.589124, 0.69600224, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ExitButton" parent="." unique_id=77875153 instance=ExtResource("1_o6w8e")]
+position = Vector2(-1102, -251)
+
+[node name="Schedule2" type="Sprite2D" parent="." unique_id=1722947444 groups=["Scedule2"]]
+position = Vector2(-161.50644, 176.36572)
+rotation = 0.1797689
+scale = Vector2(0.59912336, 0.58922946)
+texture = ExtResource("2_k4ww7")
+
+[node name="Label" type="Label" parent="Schedule2" unique_id=1144628971 groups=["Scedule2"]]
+offset_left = -216.90407
+offset_top = -160.01175
+offset_right = 221.3669
+offset_bottom = 254.98825
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "8:00a - wake up! + breakfast
+8:15a - shuttle to campus
+8:30a - 9:00a  - gym @rwc
+9:30a - 10:45a - enc1102 @CB2
+11:00a - 1:15p - zoo3733 @HS
+2:30p - 4:30p - meet with study group 
+4:30p - 5:30p - booked study room to take lockdown exam
+5:45p - shuttle home!
+"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=2076977915 groups=["Scedule2"]]
+offset_left = -269.50644
+offset_top = 30.365723
+offset_right = -170.50644
+offset_bottom = 64.36572
+rotation = 0.19373155
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Schedule"
+
+[node name="Schedule1" type="Sprite2D" parent="." unique_id=388129212 groups=["Scedule1"]]
+position = Vector2(-517.2471, 176.79533)
+rotation = -0.17453292
+scale = Vector2(0.59950894, 0.60726017)
+texture = ExtResource("2_k4ww7")
+
+[node name="Label" type="Label" parent="Schedule1" unique_id=1668086349 groups=["Scedule1"]]
+offset_left = -217.02425
+offset_top = -121.74671
+offset_right = 224.15929
+offset_bottom = 176.71545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "8:00a - 11:00a - art2203 @VAB
+11:15a - 11:45p - stop in prof office hours @ENC1
+12:00p - 1:00p - work on hw 
+3:00p - 6:00p - art2301 @VAB
+6:30 - dinner!
+"
+autowrap_mode = 2
+
+[node name="Scedule1Text" type="Label" parent="." unique_id=341869605 groups=["Scedule1"]]
+offset_left = -668.9008
+offset_top = 83.21387
+offset_right = -569.9008
+offset_bottom = 117.21387
+rotation = -0.19373155
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Schedule"
+
+[node name="TextConvo" type="Sprite2D" parent="." unique_id=1532968789]
+position = Vector2(-829, 69)
+rotation = 0.0017453292
+scale = Vector2(0.18897416, 0.2554866)
+texture = ExtResource("3_mm7ok")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1545731043]
+position = Vector2(-531, 64)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=93311370]
+position = Vector2(0, 324)
+collision_layer = 2
+collision_mask = 0
+
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1276735058]
+position = Vector2(-540, -589)
+shape = SubResource("RectangleShape2D_grw1g")
+
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1046763282]
+position = Vector2(-528, 51)
+shape = SubResource("RectangleShape2D_grw1g")
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=707822720]
+position = Vector2(-1111, -263)
+shape = SubResource("RectangleShape2D_3uleb")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=525431444]
+position = Vector2(27, -276)
+shape = SubResource("RectangleShape2D_k4ww7")
+
+[node name="QuestionAnswer" parent="." unique_id=269755955 instance=ExtResource("4_k4ww7")]
+position = Vector2(-116, 289)
+correct_answer = "HS"
+target_scene = "res://scenes/Puzzle3.tscn"

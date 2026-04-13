@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://c8e58ye63bl8i"]
 
-[ext_resource type="Script" uid="uid://dp5dgpu1shnoq" path="res://enterText.gd" id="1_djyqq"]
+[ext_resource type="Script" uid="uid://dp5dgpu1shnoq" path="res://scripts/enterAnswer.gd" id="1_djyqq"]
 
 [node name="Node2D" type="Node2D" unique_id=1751888005]
 script = ExtResource("1_djyqq")
 
 [node name="Label" type="Label" parent="." unique_id=860318540]
-offset_left = -154.0
-offset_top = 230.0
-offset_right = 174.0
-offset_bottom = 317.0
+offset_left = -158.0
+offset_top = 83.0
+offset_right = 170.0
+offset_bottom = 138.0
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=1739339064]
 offset_left = -166.0
-offset_top = 64.0
+offset_top = 22.0
 offset_right = 179.0
-offset_bottom = 175.0
+offset_bottom = 77.0

@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://dscytx8561n3u"]
+
+[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="2_7x703"]
+[ext_resource type="Texture2D" uid="uid://ds5dfxq76lbvb" path="res://assets/puzzle_assets/hm_stickynote.png" id="2_vxqgh"]
+[ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="3_feknv"]
+[ext_resource type="Texture2D" uid="uid://cnpctqc1q8rq0" path="res://assets/puzzle_assets/booking_log.png" id="4_hkr5w"]
+[ext_resource type="Texture2D" uid="uid://b2a8ripxjpfh4" path="res://assets/puzzle_assets/interaction_sheet.png" id="5_ga107"]
+[ext_resource type="Texture2D" uid="uid://dr6c5rr0oys7h" path="res://assets/puzzle_assets/menu2.png" id="6_6106l"]
+[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="7_11yur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feknv"]
+size = Vector2(1290.75, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkr5w"]
+size = Vector2(24, 727)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga107"]
+size = Vector2(14, 716)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dcxk0"]
+line_spacing = 6.0
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="Puzzle3" type="Control" unique_id=1678092719]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = -23.0
+offset_right = 309.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1858086868]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.04347826
+anchor_top = -0.045515396
+anchor_right = 0.050931677
+anchor_bottom = 0.06961178
+offset_left = 233.0
+offset_top = 22.0
+offset_right = 1364.0
+offset_bottom = 652.0
+color = Color(0.7420425, 0.5529262, 0.36689758, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" parent="." unique_id=77875153 instance=ExtResource("2_7x703")]
+position = Vector2(192, 24)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=637947298]
+position = Vector2(805, 345)
+zoom = Vector2(0.9, 0.9)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=213823050]
+position = Vector2(1336, 605)
+collision_layer = 2
+collision_mask = 0
+
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=947272568]
+position = Vector2(-526.75, -614)
+shape = SubResource("RectangleShape2D_feknv")
+
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1722210792]
+position = Vector2(-530.625, 108.5)
+shape = SubResource("RectangleShape2D_feknv")
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=85314278]
+position = Vector2(-1182, -251.5)
+shape = SubResource("RectangleShape2D_hkr5w")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=664630566]
+position = Vector2(115, -263)
+shape = SubResource("RectangleShape2D_ga107")
+
+[node name="StickyNote" type="Sprite2D" parent="." unique_id=992642339]
+position = Vector2(782, 597.5)
+scale = Vector2(0.5795207, 0.3815165)
+texture = ExtResource("2_vxqgh")
+
+[node name="Label3" type="Label" parent="." unique_id=1761347035]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 531.0
+offset_right = 1019.0
+offset_bottom = 661.0
+text = "Can you get me a sandwich with a medium sprite and an extra ranch? I’ll pay you back, just add up the price and let me know what I owe you. I’ll sell you my soul for those fries"
+label_settings = SubResource("LabelSettings_dcxk0")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Hint" type="Sprite2D" parent="." unique_id=291245227]
+position = Vector2(577.7853, 180.07487)
+rotation = -0.08901179
+scale = Vector2(0.972549, 0.38071898)
+texture = ExtResource("3_feknv")
+
+[node name="Label2" type="Label" parent="." unique_id=771726257]
+layout_mode = 0
+offset_left = 336.78516
+offset_top = 127.0749
+offset_right = 817.9613
+offset_bottom = 280.0749
+rotation = -0.08901179
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "“For the price of a friend’s Huey Magoo’s you can solve the riddles of the Student Union, such as “Look at how people row river three.”
+
+A log will reveal the truth.” 
+"
+autowrap_mode = 2
+
+[node name="Log" type="Sprite2D" parent="." unique_id=1988573941]
+position = Vector2(334, 474.99997)
+rotation = -0.08901179
+scale = Vector2(0.47217494, 0.47217494)
+texture = ExtResource("4_hkr5w")
+
+[node name="SU" type="Sprite2D" parent="." unique_id=633608355]
+position = Vector2(838.99994, 391.00003)
+scale = Vector2(0.42322096, 0.423221)
+texture = ExtResource("5_ga107")
+
+[node name="menu" type="Sprite2D" parent="." unique_id=859855264]
+position = Vector2(1261, 464)
+scale = Vector2(0.33762887, 0.33762887)
+texture = ExtResource("6_6106l")
+
+[node name="QuestionAnswer" parent="." unique_id=269755955 instance=ExtResource("7_11yur")]
+position = Vector2(1338, 548)

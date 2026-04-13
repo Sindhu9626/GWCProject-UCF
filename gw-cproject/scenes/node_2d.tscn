@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://kfdmryvpfpka"]
+
+[ext_resource type="Script" uid="uid://c5b8sl1nm687w" path="res://scripts/exitButton.gd" id="1_4dvvg"]
+[ext_resource type="Texture2D" uid="uid://c35a7x15pmkx5" path="res://assets/craftpix-556112-free-crystals-2d-game-items/PNG/shiny/11.png" id="2_rnjyy"]
+
+[node name="ExitButton" type="Node2D" unique_id=77875153]
+script = ExtResource("1_4dvvg")
+
+[node name="Button" type="Button" parent="." unique_id=554291953]
+offset_right = 488.0
+offset_bottom = 488.0
+scale = Vector2(0.259023, 0.259023)
+icon = ExtResource("2_rnjyy")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
