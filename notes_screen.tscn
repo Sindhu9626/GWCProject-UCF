@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cpkf7djyxnk7q" path="res://assets/notebook_black.png" id="1_nvpii"]
 [ext_resource type="Texture2D" uid="uid://dl4gxyr08f58k" path="res://assets/page_scribbles.png" id="2_olo5m"]
 [ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="3_o1x8c"]
-[ext_resource type="FontFile" uid="uid://t7ieandmb3dq" path="res://fonts/PixelifySans-Bold.ttf" id="4_o1x8c"]
 [ext_resource type="FontFile" uid="uid://ckervbxo0pcfs" path="res://fonts/PixelifySans-Medium.ttf" id="5_olo5m"]
 [ext_resource type="Script" uid="uid://bhvtd5updbl3m" path="res://continue_button.gd" id="6_o1x8c"]
 
@@ -50,31 +49,32 @@ offset_right = 966.0
 offset_bottom = 544.0
 color = Color(0.015686275, 0.015686275, 0, 0.77254903)
 
-[node name="note_text" type="Label" parent="notebook/balck_bg" unique_id=1733460997]
+[node name="note_title" type="Label" parent="notebook/balck_bg" unique_id=1733460997]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 104.0
-offset_right = 410.0
-offset_bottom = 481.0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 409.0
+offset_bottom = 64.0
 theme_override_fonts/font = ExtResource("3_o1x8c")
-theme_override_font_sizes/font_size = 25
-text = "test test test test test test test. test test, test. test test test"
+theme_override_font_sizes/font_size = 45
+text = "Dear Student"
 horizontal_alignment = 1
 autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 6
 
-[node name="Label" type="Label" parent="notebook/balck_bg" unique_id=1497454879]
+[node name="note_text" type="RichTextLabel" parent="notebook/balck_bg" unique_id=1190628686]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 408.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("4_o1x8c")
-theme_override_font_sizes/font_size = 45
-text = "Note 1"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 416.0
+offset_bottom = 488.0
+theme_override_fonts/normal_font = ExtResource("3_o1x8c")
+theme_override_font_sizes/normal_font_size = 25
+text = "The SU is not a good place to be past midnight. In the darkness and shadows lurks a presence that wants to keep you in. Escaping from this knightmare by normal means will not give any results. The doors and windows are locked, and you cannot even travel to an upper level. Here, on the bottom floor, you have to face your fear. To escape, take a leap of faith and seal your destiny. It’s the only way to find the trials set before you. These trials build upon each other, so you must remember the answers you have given. And don’t forget that if you take too long, you might not be able to leave at all. Good luck!
+
+Your Friend,
+Knightro"
 
 [node name="continue_button" type="Button" parent="." unique_id=1997795251]
 layout_mode = 0
@@ -87,4 +87,4 @@ theme_override_font_sizes/font_size = 25
 text = "Continue"
 script = ExtResource("6_o1x8c")
 
-[connection signal="pressed" from="continue_button" to="continue_button" method="on_continue_pressed"]
+[connection signal="pressed" from="continue_button" to="continue_button" method="on_note_continue_pressed"]
