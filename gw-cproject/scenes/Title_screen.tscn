@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bhg7a7e1tvpwx" path="res://assets/page_doodles.png" id="2_0khuj"]
 [ext_resource type="Texture2D" uid="uid://bghb0wa7lieeu" path="res://assets/page_bluelines.png" id="3_7jtef"]
 [ext_resource type="Texture2D" uid="uid://vax7lg64jpwb" path="res://assets/game_logo.png" id="4_b72b4"]
-[ext_resource type="Script" uid="uid://td31038o0otn" path="res://quit_button.gd" id="5_0khuj"]
+[ext_resource type="Script" uid="uid://td31038o0otn" path="res://scripts/quit_button.gd" id="5_0khuj"]
 [ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="5_b72b4"]
-[ext_resource type="Script" uid="uid://il6pp38l80ep" path="res://start_button.gd" id="6_ej8b0"]
+[ext_resource type="Script" uid="uid://il6pp38l80ep" path="res://scripts/start_button.gd" id="6_ej8b0"]
 
 [node name="Control" type="Control" unique_id=629614880]
 layout_mode = 3

@@ -1,5 +1,5 @@
 extends Node
-
+##Determines personality trait
 #---Swap this out later when real gameplay feeds data in
 var completion_time: float = 0.0 #time in seconds
 

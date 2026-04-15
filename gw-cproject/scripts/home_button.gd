@@ -13,4 +13,4 @@ func _on_home_button_pressed():
 
 func _on_dialog_confirmed():
 	get_tree().paused = false # unpauses so buttons will work
-	get_tree().change_scene_to_file("res://Title_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/Title_screen.tscn")

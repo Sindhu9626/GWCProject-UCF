@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce7ejvncf1nvh"]
 
 [ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="1_1txte"]
-[ext_resource type="Script" uid="uid://dpmnwn1k4eju8" path="res://win_screen.gd" id="1_luvg0"]
+[ext_resource type="Script" uid="uid://dpmnwn1k4eju8" path="res://scripts/win_screen.gd" id="1_luvg0"]
 [ext_resource type="Texture2D" uid="uid://db1fso5stdngf" path="res://assets/knightro_logo.png" id="2_26557"]
 [ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="2_luvg0"]
 [ext_resource type="FontFile" uid="uid://t7ieandmb3dq" path="res://fonts/PixelifySans-Bold.ttf" id="3_luvg0"]
@@ -123,3 +123,7 @@ offset_bottom = 544.0
 theme_override_fonts/font = ExtResource("4_5hoe6")
 theme_override_font_sizes/font_size = 25
 text = "Notes"
+
+[connection signal="pressed" from="home_button" to="." method="_on_win_home_pressed"]
+[connection signal="pressed" from="stats_button" to="." method="_on_stats_button_pressed"]
+[connection signal="pressed" from="notes_button" to="." method="_on_win_notes_pressed"]

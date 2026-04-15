@@ -33,7 +33,7 @@ func _on_timer_timeout():
 		update_timer_display()
 	else:
 		$CanvasLayer/clock/Timer.stop()
-		get_tree().change_scene_to_file("res://lose_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
 
 func update_timer_display():
 	# Sets up timer in correct minute:second format

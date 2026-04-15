@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="3_o1x8c"]
 [ext_resource type="FontFile" uid="uid://t7ieandmb3dq" path="res://fonts/PixelifySans-Bold.ttf" id="4_o1x8c"]
 [ext_resource type="FontFile" uid="uid://ckervbxo0pcfs" path="res://fonts/PixelifySans-Medium.ttf" id="5_olo5m"]
-[ext_resource type="Script" uid="uid://bhvtd5updbl3m" path="res://continue_button.gd" id="6_o1x8c"]
 
 [node name="Control" type="Control" unique_id=1373059897]
 process_mode = 3
@@ -85,6 +84,5 @@ offset_bottom = 632.0
 theme_override_fonts/font = ExtResource("5_olo5m")
 theme_override_font_sizes/font_size = 25
 text = "Continue"
-script = ExtResource("6_o1x8c")
 
 [connection signal="pressed" from="continue_button" to="continue_button" method="on_continue_pressed"]
