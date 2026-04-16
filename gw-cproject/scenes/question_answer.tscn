@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://5bxpb1lv2yv3"]
+
+[ext_resource type="Script" uid="uid://dply0dxrxx3d3" path="res://question_answer.gd" id="1_yo6t7"]
+
+[node name="QuestionAnswer" type="Node2D" unique_id=269755955]
+script = ExtResource("1_yo6t7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=588937644 groups=["AnswerGroup"]]
+offset_left = -410.0
+offset_top = -503.0
+offset_right = 14.0
+offset_bottom = -291.0
+color = Color(0.59607846, 0.59607846, 0.59607846, 1)
+
+[node name="AnswerLabel" type="Label" parent="." unique_id=601190149]
+offset_left = -377.0
+offset_top = -329.0
+offset_right = -18.0
+offset_bottom = -302.0
+
+[node name="QuestionLabel" type="Label" parent="." unique_id=843051551]
+offset_left = -364.0
+offset_top = -494.0
+offset_right = -29.0
+offset_bottom = -466.0
+
+[node name="ExampleLabel" type="Label" parent="." unique_id=942759451]
+offset_left = -376.0
+offset_top = -359.0
+offset_right = -17.0
+offset_bottom = -332.0
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1253471545]
+offset_left = -369.0
+offset_top = -466.0
+offset_right = -25.0
+offset_bottom = -408.0
+
+[node name="SubmitButton" type="Button" parent="." unique_id=1473972294 groups=["AnswerGroup"]]
+offset_left = -262.0
+offset_top = -401.0
+offset_right = -138.0
+offset_bottom = -364.0
+text = "Submit"
+
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]

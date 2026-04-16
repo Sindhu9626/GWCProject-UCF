@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dscytx8561n3u"]
+
+[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="2_7x703"]
+[ext_resource type="Texture2D" uid="uid://ds5dfxq76lbvb" path="res://assets/puzzle_assets/hm_stickynote.png" id="2_vxqgh"]
+[ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="3_feknv"]
+[ext_resource type="Texture2D" uid="uid://cnpctqc1q8rq0" path="res://assets/puzzle_assets/booking_log.png" id="4_hkr5w"]
+[ext_resource type="Texture2D" uid="uid://b2a8ripxjpfh4" path="res://assets/puzzle_assets/interaction_sheet.png" id="5_ga107"]
+[ext_resource type="Texture2D" uid="uid://dr6c5rr0oys7h" path="res://assets/puzzle_assets/menu2.png" id="6_6106l"]
+[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="7_11yur"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dcxk0"]
+line_spacing = 6.0
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="Puzzle3" type="Control" unique_id=1678092719]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -10.0
+offset_right = 327.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="border" type="ColorRect" parent="." unique_id=871999125]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.04347826
+anchor_top = -0.045515396
+anchor_right = 0.09373517
+anchor_bottom = 0.06961179
+offset_left = 233.0
+offset_top = 22.0
+offset_right = 1302.0845
+offset_bottom = 651.99976
+color = Color(0.31764707, 0.21960784, 0.12156863, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="background" type="ColorRect" parent="." unique_id=1858086868]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.02834008
+anchor_top = -0.010676157
+anchor_right = 0.036437247
+anchor_bottom = 0.03795967
+offset_left = 233.0
+offset_top = 22.0
+offset_right = 1364.0
+offset_bottom = 652.0
+color = Color(0.7420425, 0.5529262, 0.36689758, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" parent="." unique_id=77875153 instance=ExtResource("2_7x703")]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 25.0
+offset_right = 212.0
+offset_bottom = 25.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=637947298]
+position = Vector2(805, 345)
+scale = Vector2(0.95, 0.95)
+zoom = Vector2(0.9, 0.9)
+
+[node name="StickyNote" type="Sprite2D" parent="." unique_id=992642339]
+position = Vector2(775, 586.5)
+scale = Vector2(0.5795207, 0.3815165)
+texture = ExtResource("2_vxqgh")
+
+[node name="Label3" type="Label" parent="." unique_id=1761347035]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 520.0
+offset_right = 1012.0
+offset_bottom = 650.0
+text = "Can you get me a sandwich with a medium sprite and an extra ranch? I’ll pay you back, just add up the price and let me know what I owe you. I’ll sell you my soul for those fries"
+label_settings = SubResource("LabelSettings_dcxk0")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Hint" type="Sprite2D" parent="." unique_id=291245227]
+position = Vector2(546.7853, 163.07487)
+rotation = -0.08901179
+scale = Vector2(0.972549, 0.38071898)
+texture = ExtResource("3_feknv")
+
+[node name="Label2" type="Label" parent="." unique_id=771726257]
+layout_mode = 0
+offset_left = 305.78516
+offset_top = 110.0749
+offset_right = 786.9613
+offset_bottom = 263.0749
+rotation = -0.08901179
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "“For the price of a friend’s Huey Magoo’s you can solve the riddles of the Student Union, such as “Look at how people row river three.”
+
+A log will reveal the truth.” 
+"
+autowrap_mode = 2
+
+[node name="Log" type="Sprite2D" parent="." unique_id=1988573941]
+position = Vector2(350, 472)
+rotation = -0.08901179
+scale = Vector2(0.47217494, 0.47217494)
+texture = ExtResource("4_hkr5w")
+
+[node name="SU" type="Sprite2D" parent="." unique_id=633608355]
+position = Vector2(825.99994, 380)
+scale = Vector2(0.42322096, 0.423221)
+texture = ExtResource("5_ga107")
+
+[node name="menu" type="Sprite2D" parent="." unique_id=859855264]
+position = Vector2(1220, 463.99997)
+scale = Vector2(0.33762887, 0.33762887)
+texture = ExtResource("6_6106l")
+
+[node name="QuestionAnswer" parent="." unique_id=269755955 instance=ExtResource("7_11yur")]
+position = Vector2(1349, 552)
+correct_answer = "GWCROCKS"
+target_scene = "res://scenes/door_open.tscn"
+example_answer_text = "Example: UCF"
+questionLine_text = "Enter Code:"

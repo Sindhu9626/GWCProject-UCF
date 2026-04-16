@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://bcu18t2pjlk4c"]
+
+[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="1_o6w8e"]
+[ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="2_k4ww7"]
+[ext_resource type="Texture2D" uid="uid://dnlj0ti0a4xge" path="res://assets/puzzle_assets/text_messages.png" id="3_mm7ok"]
+[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="4_k4ww7"]
+
+[node name="SceduleMiniGame" type="Control" unique_id=2137153504]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 7.0
+offset_top = -36.0
+offset_right = 1161.0
+offset_bottom = 690.0
+
+[node name="border" type="ColorRect" parent="." unique_id=863653715]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.011265164
+anchor_top = 0.012396694
+anchor_right = 1.042461
+anchor_bottom = 0.9889807
+offset_right = -7.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.31764707, 0.21960784, 0.12156863, 1)
+
+[node name="Background" type="ColorRect" parent="." unique_id=324343897]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.002915452
+anchor_right = 0.022530328
+anchor_bottom = -0.002915452
+offset_left = 16.0
+offset_top = 36.825073
+offset_right = 1142.0
+offset_bottom = 666.8251
+color = Color(0.7411765, 0.5529412, 0.36862746, 1)
+
+[node name="ExitButton" parent="." unique_id=77875153 instance=ExtResource("1_o6w8e")]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 42.0
+offset_right = 29.0
+offset_bottom = 42.0
+
+[node name="Schedule2" type="Sprite2D" parent="." unique_id=1722947444 groups=["Scedule2"]]
+position = Vector2(957.4934, 464.3657)
+rotation = 0.1797689
+scale = Vector2(0.59912336, 0.58922946)
+texture = ExtResource("2_k4ww7")
+
+[node name="Label" type="Label" parent="Schedule2" unique_id=1144628971 groups=["Scedule2"]]
+offset_left = -216.90407
+offset_top = -160.01175
+offset_right = 221.3669
+offset_bottom = 254.98825
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "8:00a - wake up! + breakfast
+8:15a - shuttle to campus
+8:30a - 9:00a  - gym @rwc
+9:30a - 10:45a - enc1102 @CB2
+11:00a - 1:15p - zoo3733 @HS
+2:30p - 4:30p - meet with study group 
+4:30p - 5:30p - booked study room to take lockdown exam
+5:45p - shuttle home!
+"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=2076977915 groups=["Scedule2"]]
+layout_mode = 0
+offset_left = 849.4935
+offset_top = 318.36572
+offset_right = 948.4935
+offset_bottom = 352.36572
+rotation = 0.19373155
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Schedule"
+
+[node name="Schedule1" type="Sprite2D" parent="." unique_id=388129212 groups=["Scedule1"]]
+position = Vector2(601.7529, 464.79535)
+rotation = -0.17453292
+scale = Vector2(0.59950894, 0.60726017)
+texture = ExtResource("2_k4ww7")
+
+[node name="Label" type="Label" parent="Schedule1" unique_id=1668086349 groups=["Scedule1"]]
+offset_left = -217.02425
+offset_top = -121.74671
+offset_right = 224.15929
+offset_bottom = 176.71545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "8:00a - 11:00a - art2203 @VAB
+11:15a - 11:45p - stop in prof office hours @ENC1
+12:00p - 1:00p - work on hw 
+3:00p - 6:00p - art2301 @VAB
+6:30 - dinner!
+"
+autowrap_mode = 2
+
+[node name="Scedule1Text" type="Label" parent="." unique_id=341869605 groups=["Scedule1"]]
+layout_mode = 0
+offset_left = 450.09918
+offset_top = 371.21387
+offset_right = 549.0992
+offset_bottom = 405.21387
+rotation = -0.19373155
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "Schedule"
+
+[node name="TextConvo" type="Sprite2D" parent="." unique_id=1532968789]
+position = Vector2(287, 341)
+rotation = 0.0017453294
+scale = Vector2(0.18897414, 0.2554866)
+texture = ExtResource("3_mm7ok")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1545731043]
+position = Vector2(593, 357)
+zoom = Vector2(0.95, 0.95)
+
+[node name="QuestionAnswer" parent="." unique_id=269755955 instance=ExtResource("4_k4ww7")]
+position = Vector2(1061, 578)
+correct_answer = "HS"
+target_scene = "res://scenes/Puzzle2_time.tscn"
+example_answer_text = "Example: BA for Business Administration"
+questionLine_text = "Enter Building Location:"

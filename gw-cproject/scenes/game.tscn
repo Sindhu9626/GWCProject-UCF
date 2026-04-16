@@ -1,20 +1,79 @@
 [gd_scene format=3 uid="uid://cbbhu2iokqc54"]
 
+[ext_resource type="Script" uid="uid://b4me6d3oqnt27" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b8n8ymqeuxmwv" path="res://scenes/scene_trigger.tscn" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://ikobhc2ouv3n" path="res://scenes/scene_trigger.gd" id="2_lnu2h"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
-distance = 1.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
+size = Vector2(1153, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(24, 657)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(14, 628)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+bg_color = Color(0.25189498, 0.25189498, 0.25189498, 1)
 
 [node name="Game" type="Node2D" unique_id=1534680098]
+script = ExtResource("1_lbhrr")
 
-[node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
-position = Vector2(3, 37)
+[node name="SceneTrigger" parent="." unique_id=693164329 instance=ExtResource("1_yqjtg")]
+script = ExtResource("2_lnu2h")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=346181841]
 position = Vector2(-2, 1)
 
+[node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
+position = Vector2(-274, -13)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=208307330]
 position = Vector2(0, 324)
+collision_layer = 2
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=749804135]
-shape = SubResource("WorldBoundaryShape2D_uwrxv")
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=894350346]
+position = Vector2(2, -639)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=749804135]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1817431596]
+position = Vector2(-569, -318.5)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=23757228]
+position = Vector2(561, -315)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="PressEnterPopup" type="Control" parent="." unique_id=692624261]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="PressEnterPopup" unique_id=1377392361]
+layout_mode = 0
+offset_left = 157.0
+offset_top = -189.0
+offset_right = 345.0
+offset_bottom = -127.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
+
+[node name="Label" type="Label" parent="PressEnterPopup" unique_id=1300556496]
+layout_mode = 0
+offset_left = 206.0
+offset_top = -171.0
+offset_right = 297.0
+offset_bottom = -145.0
+text = "Press Enter"
+
+[connection signal="body_entered" from="SceneTrigger" to="SceneTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="SceneTrigger" to="SceneTrigger" method="_on_body_exited"]
+
+[editable path="SceneTrigger"]

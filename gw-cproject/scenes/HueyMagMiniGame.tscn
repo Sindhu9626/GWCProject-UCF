@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bp6g550oldgp8"]
+
+[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="2_5j6j2"]
+[ext_resource type="Texture2D" uid="uid://b20v3v7qwrbx2" path="res://assets/puzzle_assets/HM_menu.png" id="4_y86tj"]
+[ext_resource type="Texture2D" uid="uid://ds5dfxq76lbvb" path="res://assets/puzzle_assets/hm_stickynote.png" id="5_5j6j2"]
+[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="6_5j6j2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dfanb"]
+line_spacing = 6.0
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="HueyMagMiniGame" type="Control" unique_id=14040008]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 562.0
+offset_top = 260.0
+offset_right = 562.0
+offset_bottom = 260.0
+
+[node name="Border" type="ColorRect" parent="." unique_id=506773065]
+layout_mode = 0
+offset_left = -1151.0
+offset_top = -610.0
+offset_right = 56.0
+offset_bottom = 66.0
+color = Color(0.31609583, 0.218353, 0.120415755, 1)
+
+[node name="Background" type="ColorRect" parent="." unique_id=147417199]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8968254
+anchor_right = 1.0035367
+anchor_bottom = 0.8968254
+offset_left = -1120.0
+offset_top = -590.0
+offset_right = 32.0
+offset_bottom = 40.0
+color = Color(0.7411765, 0.5529412, 0.36862746, 1)
+
+[node name="ExitButton" parent="." unique_id=77875153 instance=ExtResource("2_5j6j2")]
+position = Vector2(-1102, -570)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=180159936]
+position = Vector2(-546, -273)
+zoom = Vector2(0.95, 0.95)
+
+[node name="MiniGame" type="Node2D" parent="." unique_id=1727871903]
+position = Vector2(11, 7)
+
+[node name="HM_menu" type="Sprite2D" parent="." unique_id=1464889369]
+position = Vector2(-777, -259)
+scale = Vector2(0.41201448, 0.4987755)
+texture = ExtResource("4_y86tj")
+
+[node name="StickyNote" type="Sprite2D" parent="." unique_id=1509500671]
+position = Vector2(-286.58743, -126.519)
+scale = Vector2(0.38216245, 0.65630805)
+texture = ExtResource("5_5j6j2")
+
+[node name="Label2" type="Label" parent="." unique_id=144310838]
+layout_mode = 0
+offset_left = -436.0
+offset_top = -230.0
+offset_right = -132.0
+offset_bottom = 25.0
+text = "Can you get me a sandwich with a medium sprite and an extra ranch? I’ll pay you back, just add up the price and let me know what I owe you. I’ll sell you my soul for those fries"
+label_settings = SubResource("LabelSettings_dfanb")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="QuestionAnswer" parent="." unique_id=269755955 instance=ExtResource("6_5j6j2")]
+position = Vector2(-47, -34)
+correct_answer = "12.57"
+target_scene = "res://scenes/scedule_mini_game.tscn"
+example_answer_text = "Example Answer: 14.20"
+questionLine_text = "Enter Price:"
