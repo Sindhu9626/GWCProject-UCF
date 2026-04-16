@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c8ps4tygy72nu"]
+
+[ext_resource type="Texture2D" uid="uid://cpkf7djyxnk7q" path="res://assets/notebook_black.png" id="1_nvpii"]
+[ext_resource type="Texture2D" uid="uid://dl4gxyr08f58k" path="res://assets/page_scribbles.png" id="2_olo5m"]
+[ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="3_o1x8c"]
+[ext_resource type="FontFile" uid="uid://ckervbxo0pcfs" path="res://fonts/PixelifySans-Medium.ttf" id="5_olo5m"]
+[ext_resource type="Script" uid="uid://bhvtd5updbl3m" path="res://scripts/continue_button.gd" id="6_o1x8c"]
+
+[node name="Control" type="Control" unique_id=1373059897]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="." unique_id=1099505810]
+layout_mode = 0
+offset_left = -47.0
+offset_top = -26.0
+offset_right = 1202.0
+offset_bottom = 684.0
+color = Color(0.7372549, 0.61960787, 0.50980395, 1)
+
+[node name="notebook" type="TextureRect" parent="." unique_id=1787940211]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 24.0
+offset_right = 1080.0
+offset_bottom = 613.0
+texture = ExtResource("1_nvpii")
+expand_mode = 1
+
+[node name="scribbled_page" type="TextureRect" parent="notebook" unique_id=331307846]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 454.0
+offset_bottom = 576.0
+texture = ExtResource("2_olo5m")
+expand_mode = 1
+
+[node name="balck_bg" type="ColorRect" parent="notebook" unique_id=8369613]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 48.0
+offset_right = 966.0
+offset_bottom = 544.0
+color = Color(0.015686275, 0.015686275, 0, 0.77254903)
+
+[node name="note_title" type="Label" parent="notebook/balck_bg" unique_id=1733460997]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 409.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("3_o1x8c")
+theme_override_font_sizes/font_size = 45
+text = "Dear Student"
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 6
+
+[node name="note_text" type="RichTextLabel" parent="notebook/balck_bg" unique_id=1190628686]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 416.0
+offset_bottom = 488.0
+theme_override_fonts/normal_font = ExtResource("3_o1x8c")
+theme_override_font_sizes/normal_font_size = 25
+text = "The SU is not a good place to be past midnight. In the darkness and shadows lurks a presence that wants to keep you in. Escaping from this knightmare by normal means will not give any results. The doors and windows are locked, and you cannot even travel to an upper level. Here, on the bottom floor, you have to face your fear. To escape, take a leap of faith and seal your destiny. It’s the only way to find the trials set before you. These trials build upon each other, so you must remember the answers you have given. And don’t forget that if you take too long, you might not be able to leave at all. Good luck!
+
+Your Friend,
+Knightro"
+
+[node name="continue_button" type="Button" parent="." unique_id=1997795251]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 568.0
+offset_right = 648.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("5_olo5m")
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+script = ExtResource("6_o1x8c")
+
+[connection signal="pressed" from="continue_button" to="continue_button" method="on_note_continue_pressed"]
