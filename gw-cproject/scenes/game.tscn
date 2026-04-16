@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://b8n8ymqeuxmwv" path="res://scenes/scene_trigger.tscn" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://jx4wacc7calh" path="res://assets/Enviornmental Art/flooring.png" id="2_0tnpc"]
-[ext_resource type="Script" uid="uid://ikobhc2ouv3n" path="res://scenes/scene_trigger.gd" id="2_lnu2h"]
+[ext_resource type="Script" uid="uid://ikobhc2ouv3n" path="res://scripts/scene_trigger.gd" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://y6s7r8a0xdos" path="res://assets/Enviornmental Art/door_closed.png" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dds7254m4osie" path="res://assets/Enviornmental Art/columns.png" id="4_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bfokut85kw4qn" path="res://assets/Enviornmental Art/upper_level.png" id="5_dinhu"]
