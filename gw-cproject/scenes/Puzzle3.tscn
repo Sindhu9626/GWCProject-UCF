@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://dscytx8561n3u"]
+[gd_scene format=3 uid="uid://c327h3d4hbdux"]
 
-[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="2_7x703"]
+[ext_resource type="PackedScene" path="res://scenes/node_2d.tscn" id="2_7x703"]
 [ext_resource type="Texture2D" uid="uid://ds5dfxq76lbvb" path="res://assets/puzzle_assets/hm_stickynote.png" id="2_vxqgh"]
 [ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="3_feknv"]
 [ext_resource type="Texture2D" uid="uid://cnpctqc1q8rq0" path="res://assets/puzzle_assets/booking_log.png" id="4_hkr5w"]
 [ext_resource type="Texture2D" uid="uid://b2a8ripxjpfh4" path="res://assets/puzzle_assets/interaction_sheet.png" id="5_ga107"]
 [ext_resource type="Texture2D" uid="uid://dr6c5rr0oys7h" path="res://assets/puzzle_assets/menu2.png" id="6_6106l"]
-[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="7_11yur"]
+[ext_resource type="PackedScene" path="res://scenes/question_answer.tscn" id="7_11yur"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dcxk0"]
 line_spacing = 6.0

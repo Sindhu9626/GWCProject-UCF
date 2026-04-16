@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bcu18t2pjlk4c"]
+[gd_scene format=3 uid="uid://cy5146dk7ynoe"]
 
-[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="1_o6w8e"]
+[ext_resource type="PackedScene" path="res://scenes/node_2d.tscn" id="1_o6w8e"]
 [ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="2_k4ww7"]
 [ext_resource type="Texture2D" uid="uid://dnlj0ti0a4xge" path="res://assets/puzzle_assets/text_messages.png" id="3_mm7ok"]
-[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="4_k4ww7"]
+[ext_resource type="PackedScene" path="res://scenes/question_answer.tscn" id="4_k4ww7"]
 
 [node name="SceduleMiniGame" type="Control" unique_id=2137153504]
 layout_mode = 3

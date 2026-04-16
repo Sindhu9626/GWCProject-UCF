@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bp6g550oldgp8"]
+[gd_scene format=3 uid="uid://d01bg6std4kus"]
 
-[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="2_5j6j2"]
+[ext_resource type="PackedScene" path="res://scenes/node_2d.tscn" id="2_5j6j2"]
 [ext_resource type="Texture2D" uid="uid://b20v3v7qwrbx2" path="res://assets/puzzle_assets/HM_menu.png" id="4_y86tj"]
 [ext_resource type="Texture2D" uid="uid://ds5dfxq76lbvb" path="res://assets/puzzle_assets/hm_stickynote.png" id="5_5j6j2"]
-[ext_resource type="PackedScene" uid="uid://5bxpb1lv2yv3" path="res://scenes/question_answer.tscn" id="6_5j6j2"]
+[ext_resource type="PackedScene" path="res://scenes/question_answer.tscn" id="6_5j6j2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dfanb"]
 line_spacing = 6.0
@@ -39,7 +39,11 @@ offset_bottom = 40.0
 color = Color(0.7411765, 0.5529412, 0.36862746, 1)
 
 [node name="ExitButton" parent="." unique_id=77875153 instance=ExtResource("2_5j6j2")]
-position = Vector2(-1102, -570)
+layout_mode = 0
+offset_left = -1102.0
+offset_top = -570.0
+offset_right = -1102.0
+offset_bottom = -570.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=180159936]
 position = Vector2(-546, -273)
