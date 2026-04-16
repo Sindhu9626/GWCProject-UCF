@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776315703
+::res://::1776315933
 continue_button.gd::GDScript::2922255109521046536::1776315411::0::1::::<>Button<><>0<>0<><>::
 exit_button.gd::GDScript::3451333198161295847::1776315411::0::1::::<>TextureButton<><>0<>0<><>::
 game_screen.gd::GDScript::2582863402898114599::1776315411::0::1::::<>Control<><>0<>0<><>::
@@ -11,7 +11,7 @@ notes_screen.tscn::PackedScene::5408196000061450746::1776315412::0::1::::<><><>0
 pause_screen.tscn::PackedScene::773323896427452508::1776315412::0::1::::<><><>0<>0<><>::uid://bsfj4fp3tn6qb::::res://assets/notebook_blue.png<>uid://bhg7a7e1tvpwx::::res://assets/page_doodles.png<>uid://bghb0wa7lieeu::::res://assets/page_bluelines.png<>uid://bpww68kvlsu7g::::res://fonts/PixelifySans-Regular.ttf<>uid://bi13ekfyhsho8::::res://fonts/PixelifySans-SemiBold.ttf<>uid://88xcncvsqs6q::::res://resume_button.gd<>uid://qk7f11imo2p::::res://home_button.gd
 quit_button.gd::GDScript::1341529026681137299::1776315412::0::1::::<>Button<><>0<>0<><>::
 resume_button.gd::GDScript::2385757055232489142::1776315412::0::1::::<>Button<><>0<>0<><>::
-start_button.gd::GDScript::586128750703421011::1776315412::0::1::::<>Button<><>0<>0<><>::
+start_button.gd::GDScript::586128750703421011::1776315859::0::1::::<>Button<><>0<>0<><>::
 stats_screen.tscn::PackedScene::325117756574953502::1776315412::0::1::::<><><>0<>0<><>::uid://celjxjlqchx8b::::res://assets/ipad_nobg.png<>uid://t7ieandmb3dq::::res://fonts/PixelifySans-Bold.ttf<>uid://bpww68kvlsu7g::::res://fonts/PixelifySans-Regular.ttf<>uid://bghb0wa7lieeu::::res://assets/page_bluelines.png<>uid://bhg7a7e1tvpwx::::res://assets/page_doodles.png<>uid://bsfj4fp3tn6qb::::res://assets/notebook_blue.png
 Title_screen.tscn::PackedScene::5763930358385417843::1776315411::0::1::::<><><>0<>0<><>::uid://bsfj4fp3tn6qb::::res://assets/notebook_blue.png<>uid://bhg7a7e1tvpwx::::res://assets/page_doodles.png<>uid://bghb0wa7lieeu::::res://assets/page_bluelines.png<>uid://vax7lg64jpwb::::res://assets/game_logo.png<>uid://td31038o0otn::::res://quit_button.gd<>uid://bpww68kvlsu7g::::res://fonts/PixelifySans-Regular.ttf<>uid://il6pp38l80ep::::res://start_button.gd
 win_screen.gd::GDScript::8237696570532120989::1776315412::0::1::::<>Control<><>0<>0<><>::
