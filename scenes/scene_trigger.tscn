@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8n8ymqeuxmwv"]
+
+[ext_resource type="Texture2D" uid="uid://qbfyl5oqvbvn" path="res://assets/Enviornmental Art/seal.png" id="1_7mgev"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h626q"]
+radius = 129.00388
+
+[node name="SceneTrigger" type="Area2D" unique_id=693164329]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=992891068]
+position = Vector2(2.9999962, 3.999998)
+scale = Vector2(2.4250002, 2.4250002)
+texture = ExtResource("1_7mgev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214636986]
+position = Vector2(6, -4)
+shape = SubResource("CircleShape2D_h626q")

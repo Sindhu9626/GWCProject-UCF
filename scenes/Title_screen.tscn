@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://coedddcaxc51h"]
 
-[ext_resource type="Texture2D" uid="uid://bsfj4fp3tn6qb" path="res://assets/notebook_blue.png" id="1_uffmt"]
-[ext_resource type="Texture2D" uid="uid://bhg7a7e1tvpwx" path="res://assets/page_doodles.png" id="2_0khuj"]
-[ext_resource type="Texture2D" uid="uid://bghb0wa7lieeu" path="res://assets/page_bluelines.png" id="3_7jtef"]
-[ext_resource type="Texture2D" uid="uid://vax7lg64jpwb" path="res://assets/game_logo.png" id="4_b72b4"]
-[ext_resource type="Script" uid="uid://td31038o0otn" path="res://scripts/quit_button.gd" id="5_0khuj"]
-[ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="5_b72b4"]
-[ext_resource type="Script" uid="uid://il6pp38l80ep" path="res://scripts/start_button.gd" id="6_ej8b0"]
+[ext_resource type="Texture2D" uid="uid://bsfj4fp3tn6qb" path="res://assets/notebook_blue.png" id="1_kpgx6"]
+[ext_resource type="Texture2D" uid="uid://bhg7a7e1tvpwx" path="res://assets/page_doodles.png" id="2_qls5v"]
+[ext_resource type="Texture2D" uid="uid://bghb0wa7lieeu" path="res://assets/page_bluelines.png" id="3_wyeab"]
+[ext_resource type="Texture2D" uid="uid://vax7lg64jpwb" path="res://assets/game_logo.png" id="4_xlh7v"]
+[ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="5_j6w0l"]
+[ext_resource type="Script" uid="uid://il6pp38l80ep" path="res://scripts/start_button.gd" id="6_3we7c"]
+[ext_resource type="Script" uid="uid://td31038o0otn" path="res://scripts/quit_button.gd" id="7_0stfc"]
 
 [node name="Control" type="Control" unique_id=629614880]
 layout_mode = 3
@@ -24,6 +24,7 @@ offset_top = -47.0
 offset_right = 1220.0
 offset_bottom = 708.0
 color = Color(0.7372549, 0.61960787, 0.50980395, 1)
+metadata/_edit_lock_ = true
 
 [node name="Title_notebook" type="TextureRect" parent="." unique_id=1636772942]
 layout_mode = 0
@@ -32,8 +33,9 @@ offset_top = -19.0
 offset_right = 1110.4375
 offset_bottom = 522.3591
 rotation = 0.17453292
-texture = ExtResource("1_uffmt")
+texture = ExtResource("1_kpgx6")
 expand_mode = 3
+metadata/_edit_lock_ = true
 
 [node name="doodlepage_1" type="TextureRect" parent="." unique_id=1575126530]
 z_index = -1
@@ -43,8 +45,9 @@ offset_top = -168.10904
 offset_right = 1333.8087
 offset_bottom = 361.2966
 rotation = -0.37524578
-texture = ExtResource("2_0khuj")
+texture = ExtResource("2_qls5v")
 expand_mode = 3
+metadata/_edit_lock_ = true
 
 [node name="doodlepage_2" type="TextureRect" parent="." unique_id=627117565]
 z_index = -1
@@ -54,8 +57,9 @@ offset_top = 499.04318
 offset_right = 325.26572
 offset_bottom = 1035.1246
 rotation = -0.29670596
-texture = ExtResource("2_0khuj")
+texture = ExtResource("2_qls5v")
 expand_mode = 3
+metadata/_edit_lock_ = true
 
 [node name="blankpage" type="TextureRect" parent="." unique_id=499845446]
 z_index = -2
@@ -65,8 +69,9 @@ offset_top = -130.99998
 offset_right = 580.55005
 offset_bottom = 395.43683
 rotation = 0.5009095
-texture = ExtResource("3_7jtef")
+texture = ExtResource("3_wyeab")
 expand_mode = 3
+metadata/_edit_lock_ = true
 
 [node name="blankpage2" type="TextureRect" parent="." unique_id=1506655956]
 z_index = -2
@@ -76,8 +81,9 @@ offset_top = 192.0
 offset_right = 1170.3374
 offset_bottom = 732.54443
 rotation = -0.08726646
-texture = ExtResource("3_7jtef")
+texture = ExtResource("3_wyeab")
 expand_mode = 3
+metadata/_edit_lock_ = true
 
 [node name="logo" type="TextureRect" parent="." unique_id=4869977]
 layout_mode = 1
@@ -92,8 +98,9 @@ offset_right = -0.3560791
 offset_bottom = 0.015960693
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_b72b4")
+texture = ExtResource("4_xlh7v")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="start_button" type="Button" parent="." unique_id=1489290759]
 layout_mode = 0
@@ -101,10 +108,11 @@ offset_left = 728.0
 offset_top = 384.0
 offset_right = 895.0
 offset_bottom = 427.0
-theme_override_fonts/font = ExtResource("5_b72b4")
+theme_override_fonts/font = ExtResource("5_j6w0l")
 theme_override_font_sizes/font_size = 20
 text = "Start"
-script = ExtResource("6_ej8b0")
+script = ExtResource("6_3we7c")
+metadata/_edit_lock_ = true
 
 [node name="quit_button" type="Button" parent="." unique_id=561764761]
 layout_mode = 0
@@ -112,10 +120,11 @@ offset_left = 728.0
 offset_top = 440.0
 offset_right = 895.0
 offset_bottom = 483.0
-theme_override_fonts/font = ExtResource("5_b72b4")
+theme_override_fonts/font = ExtResource("5_j6w0l")
 theme_override_font_sizes/font_size = 20
 text = "Quit"
-script = ExtResource("5_0khuj")
+script = ExtResource("7_0stfc")
+metadata/_edit_lock_ = true
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="quit_button" unique_id=1829881654]
 dialog_text = "Are you sure you want to quit the game? 

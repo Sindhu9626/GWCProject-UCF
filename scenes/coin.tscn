@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://vy8ky3f2ywtj"]
+
+[ext_resource type="Script" uid="uid://gyksvxs80mxg" path="res://scripts/coin.gd" id="1_i64fm"]
+[ext_resource type="Texture2D" uid="uid://ry2jsah228yo" path="res://assets/craftpix-556112-free-crystals-2d-game-items/PNG/shiny/3.png" id="1_rwqht"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnu2h"]
+radius = 86.09297
+
+[node name="Coin" type="Node2D" unique_id=1724915094]
+script = ExtResource("1_i64fm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1693763356]
+position = Vector2(49.999985, -245)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_rwqht")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=6151556]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1327434907]
+position = Vector2(50, -246)
+shape = SubResource("CircleShape2D_lnu2h")

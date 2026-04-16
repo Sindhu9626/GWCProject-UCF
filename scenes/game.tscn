@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://cbbhu2iokqc54"]
+
+[ext_resource type="Script" uid="uid://b4me6d3oqnt27" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://0lcem61ipkhl" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b8n8ymqeuxmwv" path="res://scenes/scene_trigger.tscn" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://jx4wacc7calh" path="res://assets/Enviornmental Art/flooring.png" id="2_0tnpc"]
+[ext_resource type="Script" uid="uid://ikobhc2ouv3n" path="res://scripts/scene_trigger.gd" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://y6s7r8a0xdos" path="res://assets/Enviornmental Art/door_closed.png" id="3_vtaks"]
+[ext_resource type="Texture2D" uid="uid://dds7254m4osie" path="res://assets/Enviornmental Art/columns.png" id="4_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://bfokut85kw4qn" path="res://assets/Enviornmental Art/upper_level.png" id="5_dinhu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
+size = Vector2(1942.5, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(37, 1072)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(20, 1059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+bg_color = Color(0.25189498, 0.25189498, 0.25189498, 1)
+
+[node name="Game" type="Node2D" unique_id=1352321331]
+script = ExtResource("1_lbhrr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=902630798]
+offset_left = -1054.0
+offset_top = -423.0
+offset_right = 1346.0
+offset_bottom = 777.0
+color = Color(0.7641307, 0.49700385, 0.39883775, 1)
+metadata/_edit_lock_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=1034434307]
+offset_left = -566.0
+offset_top = -312.0
+offset_right = 558.0
+offset_bottom = 730.0
+texture = ExtResource("2_0tnpc")
+metadata/_edit_lock_ = true
+
+[node name="doors" type="TextureRect" parent="." unique_id=182185869]
+offset_left = -144.0
+offset_top = 623.0
+offset_right = 139.79999
+offset_bottom = 752.0
+texture = ExtResource("3_vtaks")
+metadata/_edit_lock_ = true
+
+[node name="columns" type="TextureRect" parent="." unique_id=1627100266]
+offset_left = -580.0
+offset_top = -265.0
+offset_right = 590.0
+offset_bottom = 709.0
+texture = ExtResource("4_kvpfn")
+metadata/_edit_lock_ = true
+
+[node name="upperlevel" type="TextureRect" parent="." unique_id=506045774]
+offset_left = -555.0
+offset_top = -286.0
+offset_right = 554.0
+offset_bottom = 749.0
+texture = ExtResource("5_dinhu")
+metadata/_edit_lock_ = true
+
+[node name="SceneTrigger" parent="." unique_id=693164329 instance=ExtResource("1_yqjtg")]
+script = ExtResource("2_lnu2h")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" parent="SceneTrigger" index="0" unique_id=992891068]
+position = Vector2(-9, 199)
+scale = Vector2(2.05, 2.05)
+
+[node name="CollisionShape2D" parent="SceneTrigger" index="1" unique_id=214636986]
+position = Vector2(-6, 193)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=346181841]
+position = Vector2(11, 210)
+zoom = Vector2(0.6, 0.6)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
+position = Vector2(-274, -13)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=208307330]
+position = Vector2(0, 324)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=894350346]
+position = Vector2(18, -637)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=749804135]
+position = Vector2(5, 418)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1817431596]
+position = Vector2(-971, -111)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=23757228]
+position = Vector2(988, -115)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="PressEnterPopup" type="Control" parent="." unique_id=692624261]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 458.0
+offset_top = -25.0
+offset_right = 498.0
+offset_bottom = 15.0
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="PressEnterPopup" unique_id=1377392361]
+layout_mode = 0
+offset_left = 157.0
+offset_top = -189.0
+offset_right = 345.0
+offset_bottom = -127.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
+
+[node name="Label" type="Label" parent="PressEnterPopup" unique_id=1300556496]
+layout_mode = 0
+offset_left = 206.0
+offset_top = -171.0
+offset_right = 297.0
+offset_bottom = -145.0
+text = "Press Enter"
+
+[connection signal="body_entered" from="SceneTrigger" to="SceneTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="SceneTrigger" to="SceneTrigger" method="_on_body_exited"]
+
+[editable path="SceneTrigger"]
