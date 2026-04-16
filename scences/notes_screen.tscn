@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dl4gxyr08f58k" path="res://assets/page_scribbles.png" id="2_olo5m"]
 [ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="3_o1x8c"]
 [ext_resource type="FontFile" uid="uid://ckervbxo0pcfs" path="res://fonts/PixelifySans-Medium.ttf" id="5_olo5m"]
-[ext_resource type="Script" uid="uid://bhvtd5updbl3m" path="res://continue_button.gd" id="6_o1x8c"]
+[ext_resource type="Script" uid="uid://bhvtd5updbl3m" path="res://scripts/continue_button.gd" id="6_o1x8c"]
 
 [node name="Control" type="Control" unique_id=1373059897]
 process_mode = 3
