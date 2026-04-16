@@ -109,6 +109,7 @@ position = Vector2(988, -115)
 shape = SubResource("RectangleShape2D_lnu2h")
 
 [node name="PressEnterPopup" type="Control" parent="." unique_id=692624261]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 458.0
