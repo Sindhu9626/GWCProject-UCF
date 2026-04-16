@@ -209,3 +209,5 @@ offset_bottom = 638.0
 theme_override_fonts/font = ExtResource("3_6ydm6")
 theme_override_font_sizes/font_size = 40
 text = "Home"
+
+[connection signal="pressed" from="Button" to="." method="_on_win_home_pressed"]

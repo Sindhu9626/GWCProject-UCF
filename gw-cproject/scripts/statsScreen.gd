@@ -3,7 +3,7 @@ extends Control
 
 func _ready():
 	#This needs to be removed when we actually have a timer
-	GameData.completion_time = 20.0
+	GameData.completion_time = 200.0
 	#Time can be changed for testing
 	
 	var personality = GameData.get_personality()
@@ -21,4 +21,6 @@ func _ready():
 		$ipad/"overthinkersprite".visible = true
 	else:
 		$ipad/"averagejoesprite".visible = true
-	
+
+func _on_win_home_pressed():
+	get_tree().change_scene_to_file("res://scenes/Title_screen.tscn")	

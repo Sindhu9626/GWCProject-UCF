@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://da6vkbdt24crp"]
 
 [ext_resource type="Script" uid="uid://bc2fnau5tfa12" path="res://scripts/game_screen.gd" id="1_norob"]
-[ext_resource type="Texture2D" path="res://assets/timer.png" id="1_t5odh"]
-[ext_resource type="FontFile" path="res://fonts/DigitalNumbers-Regular.ttf" id="2_xwjjp"]
+[ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="1_t5odh"]
+[ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="2_xwjjp"]
 [ext_resource type="PackedScene" uid="uid://lauscrvayod5" path="res://scenes/pause_screen.tscn" id="4_j7yda"]
 [ext_resource type="PackedScene" uid="uid://cjb1gy4fmpe7s" path="res://scenes/notes_screen.tscn" id="5_lxtpa"]
 

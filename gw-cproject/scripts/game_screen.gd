@@ -1,6 +1,6 @@
 extends Control
 
-var total_seconds: int = 900
+var total_seconds: int = 420
 
 func _ready():
 	# Hides mouse when game starts
