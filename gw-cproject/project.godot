@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameState="*uid://yu2lq8jjmlir"
 GameTimer="*uid://dvbseebocrgkp"
+Music="*uid://86hrk271feku"
 
 [input]
 

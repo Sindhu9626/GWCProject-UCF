@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://86hrk271feku"]
+
+[ext_resource type="AudioStream" uid="uid://bs33g4a7mv5jc" path="res://assets/Puzzle-Meditation.ogg" id="1_jxdhu"]
+
+[node name="MusicPlayer" type="Node" unique_id=909255771]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2093074581]
+stream = ExtResource("1_jxdhu")
+autoplay = true
