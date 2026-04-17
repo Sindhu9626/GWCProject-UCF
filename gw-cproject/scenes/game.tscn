@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://y6s7r8a0xdos" path="res://assets/Enviornmental Art/door_closed.png" id="3_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dds7254m4osie" path="res://assets/Enviornmental Art/columns.png" id="4_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://bfokut85kw4qn" path="res://assets/Enviornmental Art/upper_level.png" id="5_dinhu"]
-[ext_resource type="Texture2D" uid="uid://qbfyl5oqvbvn" path="res://assets/Enviornmental Art/seal.png" id="8_kvuet"]
+[ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="9_0tnpc"]
+[ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="10_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
 size = Vector2(1942.5, 29)
@@ -25,7 +26,7 @@ bg_color = Color(0.25189498, 0.25189498, 0.25189498, 1)
 [node name="Game" type="Node2D" unique_id=1534680098]
 script = ExtResource("1_lbhrr")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=902630798]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=902630798 groups=["mainBackground"]]
 offset_left = -1054.0
 offset_top = -423.0
 offset_right = 1346.0
@@ -33,7 +34,7 @@ offset_bottom = 777.0
 color = Color(0.7641307, 0.49700385, 0.39883775, 1)
 metadata/_edit_lock_ = true
 
-[node name="Background" type="TextureRect" parent="." unique_id=1034434307]
+[node name="Background" type="TextureRect" parent="." unique_id=1034434307 groups=["mainBackground"]]
 offset_left = -566.0
 offset_top = -312.0
 offset_right = 558.0
@@ -41,7 +42,7 @@ offset_bottom = 730.0
 texture = ExtResource("2_0tnpc")
 metadata/_edit_lock_ = true
 
-[node name="doors" type="TextureRect" parent="." unique_id=182185869]
+[node name="doors" type="TextureRect" parent="." unique_id=182185869 groups=["mainBackground"]]
 offset_left = -144.0
 offset_top = 623.0
 offset_right = 139.79999
@@ -49,7 +50,7 @@ offset_bottom = 752.0
 texture = ExtResource("3_vtaks")
 metadata/_edit_lock_ = true
 
-[node name="columns" type="TextureRect" parent="." unique_id=1627100266]
+[node name="columns" type="TextureRect" parent="." unique_id=1627100266 groups=["mainBackground"]]
 offset_left = -580.0
 offset_top = -265.0
 offset_right = 590.0
@@ -57,7 +58,7 @@ offset_bottom = 709.0
 texture = ExtResource("4_kvpfn")
 metadata/_edit_lock_ = true
 
-[node name="upperlevel" type="TextureRect" parent="." unique_id=506045774]
+[node name="upperlevel" type="TextureRect" parent="." unique_id=506045774 groups=["mainBackground"]]
 offset_left = -555.0
 offset_top = -286.0
 offset_right = 554.0
@@ -67,12 +68,10 @@ metadata/_edit_lock_ = true
 
 [node name="SceneTrigger" parent="." unique_id=693164329 instance=ExtResource("1_yqjtg")]
 script = ExtResource("2_lnu2h")
-metadata/_edit_lock_ = true
 
 [node name="Sprite2D" parent="SceneTrigger" index="0" unique_id=992891068]
 position = Vector2(-9, 199)
 scale = Vector2(2.05, 2.05)
-texture = ExtResource("8_kvuet")
 
 [node name="CollisionShape2D" parent="SceneTrigger" index="1" unique_id=214636986]
 position = Vector2(-6, 193)
@@ -80,17 +79,14 @@ position = Vector2(-6, 193)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=346181841]
 position = Vector2(11, 210)
 zoom = Vector2(0.6, 0.6)
-metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=810775942 instance=ExtResource("1_uwrxv")]
 position = Vector2(-274, -13)
-metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=208307330]
 position = Vector2(0, 324)
 collision_layer = 2
 collision_mask = 0
-metadata/_edit_lock_ = true
 
 [node name="TopWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=894350346]
 position = Vector2(18, -637)
@@ -119,21 +115,60 @@ offset_bottom = 15.0
 
 [node name="Panel" type="Panel" parent="PressEnterPopup" unique_id=1377392361]
 layout_mode = 0
-offset_left = 157.0
-offset_top = -189.0
-offset_right = 345.0
-offset_bottom = -127.0
+offset_left = -382.0
+offset_top = -44.0
+offset_right = -194.0
+offset_bottom = 18.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
 
 [node name="Label" type="Label" parent="PressEnterPopup" unique_id=1300556496]
 layout_mode = 0
-offset_left = 206.0
-offset_top = -171.0
-offset_right = 297.0
-offset_bottom = -145.0
+offset_left = -333.0
+offset_top = -26.0
+offset_right = -242.0
 text = "Press Enter"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1985899724]
+
+[node name="TimerControl" type="Control" parent="CanvasLayer" unique_id=434546074]
+layout_mode = 3
+anchor_left = -0.069000006
+anchor_top = -0.22200002
+anchor_right = 0.035
+anchor_bottom = -0.065000005
+offset_left = 284.488
+offset_top = 167.85602
+offset_right = 298.68
+offset_bottom = 151.11987
+
+[node name="TimerBackground" type="TextureRect" parent="CanvasLayer/TimerControl" unique_id=305025552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 658.0
+offset_top = 467.0
+offset_right = 723.4545
+offset_bottom = 497.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_0tnpc")
+expand_mode = 1
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer/TimerControl" unique_id=313591307]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 492.0
+offset_right = 845.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0.78431374, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_vtaks")
+theme_override_font_sizes/font_size = 40
+
+[node name="CountDownTimer" type="Timer" parent="." unique_id=113898211]
 
 [connection signal="body_entered" from="SceneTrigger" to="SceneTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="SceneTrigger" to="SceneTrigger" method="_on_body_exited"]
+[connection signal="timeout" from="CountDownTimer" to="." method="_on_count_down_timer_timeout"]
 
 [editable path="SceneTrigger"]

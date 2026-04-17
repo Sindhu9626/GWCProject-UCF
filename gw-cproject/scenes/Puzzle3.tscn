@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://c327h3d4hbdux"]
 
-[ext_resource type="PackedScene" path="res://scenes/node_2d.tscn" id="2_7x703"]
+[ext_resource type="Script" uid="uid://dqcdbw7ygf38f" path="res://scenes/puzzle_3.gd" id="1_ga107"]
+[ext_resource type="PackedScene" uid="uid://kfdmryvpfpka" path="res://scenes/node_2d.tscn" id="2_7x703"]
 [ext_resource type="Texture2D" uid="uid://ds5dfxq76lbvb" path="res://assets/puzzle_assets/hm_stickynote.png" id="2_vxqgh"]
 [ext_resource type="Texture2D" uid="uid://cg23dcxxrs11m" path="res://assets/puzzle_assets/sticky_note2.png" id="3_feknv"]
 [ext_resource type="Texture2D" uid="uid://cnpctqc1q8rq0" path="res://assets/puzzle_assets/booking_log.png" id="4_hkr5w"]
 [ext_resource type="Texture2D" uid="uid://b2a8ripxjpfh4" path="res://assets/puzzle_assets/interaction_sheet.png" id="5_ga107"]
 [ext_resource type="Texture2D" uid="uid://dr6c5rr0oys7h" path="res://assets/puzzle_assets/menu2.png" id="6_6106l"]
-[ext_resource type="PackedScene" path="res://scenes/question_answer.tscn" id="7_11yur"]
+[ext_resource type="PackedScene" uid="uid://o0yu23htleht" path="res://scenes/question_answer.tscn" id="7_11yur"]
+[ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="9_6106l"]
+[ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="10_11yur"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dcxk0"]
 line_spacing = 6.0
@@ -24,6 +27,7 @@ offset_right = 327.0
 offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ga107")
 
 [node name="border" type="ColorRect" parent="." unique_id=871999125]
 layout_mode = 1
@@ -82,16 +86,16 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Hint" type="Sprite2D" parent="." unique_id=291245227]
-position = Vector2(546.7853, 163.07487)
+position = Vector2(448.7853, 163.07487)
 rotation = -0.08901179
 scale = Vector2(0.972549, 0.38071898)
 texture = ExtResource("3_feknv")
 
 [node name="Label2" type="Label" parent="." unique_id=771726257]
 layout_mode = 0
-offset_left = 305.78516
+offset_left = 207.78519
 offset_top = 110.0749
-offset_right = 786.9613
+offset_right = 688.9613
 offset_bottom = 263.0749
 rotation = -0.08901179
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -123,3 +127,44 @@ correct_answer = "GWCROCKS"
 target_scene = "res://scenes/door_open.tscn"
 example_answer_text = "Example: UCF"
 questionLine_text = "Enter Code:"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1105816977]
+
+[node name="TimerControl" type="Control" parent="CanvasLayer" unique_id=547905587]
+layout_mode = 3
+anchor_left = -0.21900001
+anchor_top = -0.698
+anchor_right = -0.115
+anchor_bottom = -0.56600004
+offset_left = 61.28801
+offset_top = 10.304016
+offset_right = 75.479996
+offset_bottom = 9.767914
+
+[node name="TimerBackground" type="TextureRect" parent="CanvasLayer/TimerControl" unique_id=1913580451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 681.0
+offset_top = 477.0
+offset_right = 746.4546
+offset_bottom = 507.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_6106l")
+expand_mode = 1
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer/TimerControl" unique_id=2063813523]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 502.0
+offset_right = 868.0
+offset_bottom = 583.0
+theme_override_colors/font_color = Color(0.78431374, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_11yur")
+theme_override_font_sizes/font_size = 40
+
+[node name="CountDownTimer" type="Timer" parent="." unique_id=1580784189]
+
+[connection signal="timeout" from="CountDownTimer" to="." method="_on_count_down_timer_timeout"]

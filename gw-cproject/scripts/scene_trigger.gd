@@ -26,7 +26,7 @@ func _process(delta):
 	if entered:
 		if Input.is_action_just_pressed("ui_accept"):
 			if player_ref != null:
-				Game.player_position = player_ref.global_position
-				Game.has_saved_player_position = true
+				GameState.player_position = player_ref.global_position
+				GameState.has_saved_player_position = true
 		
 			get_tree().change_scene_to_file("res://scenes/HueyMagMiniGame.tscn")

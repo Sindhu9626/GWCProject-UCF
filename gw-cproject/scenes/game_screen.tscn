@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://da6vkbdt24crp"]
+
+[ext_resource type="Script" uid="uid://bw3eh6ct7f3jf" path="res://scripts/game_screen.gd" id="1_norob"]
+[ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="1_t5odh"]
+[ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="2_xwjjp"]
+[ext_resource type="PackedScene" path="res://scenes/pause_screen.tscn" id="4_j7yda"]
+[ext_resource type="PackedScene" uid="uid://c8ps4tygy72nu" path="res://scenes/notes_screen.tscn" id="5_lxtpa"]
+
+[node name="Control" type="Control" unique_id=724261120]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_norob")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=66339298]
+
+[node name="pause" parent="CanvasLayer" unique_id=499800166 instance=ExtResource("4_j7yda")]
+
+[node name="notes" parent="CanvasLayer" unique_id=1373059897 instance=ExtResource("5_lxtpa")]
+
+[node name="clock" type="TextureRect" parent="CanvasLayer" unique_id=461916187]
+offset_right = 256.0
+offset_bottom = 128.0
+texture = ExtResource("1_t5odh")
+expand_mode = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer/clock" unique_id=1196682737]
+autostart = true
+
+[node name="Label" type="Label" parent="CanvasLayer/clock/Timer" unique_id=945122530]
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 225.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0.78431374, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xwjjp")
+theme_override_font_sizes/font_size = 52
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[connection signal="timeout" from="CanvasLayer/clock/Timer" to="." method="_on_timer_timeout"]

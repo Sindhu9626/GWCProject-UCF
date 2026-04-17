@@ -7,10 +7,18 @@ func _ready():
 	timer_label.text = GameTimer.get_time_text()
 	countdown_timer.start()
 
-func _on_count_down_timer_timeout() -> void:
+func _on_count_down_timer_timeout():
 	GameTimer.tick()
 	timer_label.text = GameTimer.get_time_text()
-	
+
 	if GameTimer.total_seconds <= 0:
 		GameTimer.stop_timer()
 		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
+
+func _on_exit_body_entered(body: Node2D):
+	if body.is_in_group("player"):
+		GameTimer.stop_timer()
+		
+		# Save the final time
+		GameTimer.final_time = GameTimer.get_time_text()
+		get_tree().change_scene_to_file("res://scenes/win_screen.tscn")

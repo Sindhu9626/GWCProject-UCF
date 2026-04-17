@@ -19,8 +19,8 @@ const SPEED = 200.0
 var last_direction: Vector2 = Vector2.DOWN
 
 func _ready() -> void:
-	if Game.has_saved_player_position:
-		global_position = Game.player_position
+	if GameState.has_saved_player_position:
+		global_position = GameState.player_position
 
 func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

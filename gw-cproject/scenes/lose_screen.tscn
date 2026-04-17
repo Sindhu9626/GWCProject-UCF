@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://7p7ihbnh7rrc"]
+
+[ext_resource type="Script" uid="uid://dfmnpn1wqanuw" path="res://lose_screen.gd" id="1_6mmkj"]
+[ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="1_h3ym8"]
+[ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="2_6mmkj"]
+[ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="2_7hir2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mmkj"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control" unique_id=906672571]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6mmkj")
+
+[node name="background" type="ColorRect" parent="." unique_id=908953561]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -21.0
+offset_right = 48.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.019607844, 0.019607844, 0.81960785)
+
+[node name="clock" type="TextureRect" parent="." unique_id=856114255]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 384.0
+texture = ExtResource("1_h3ym8")
+expand_mode = 1
+
+[node name="timer" type="Label" parent="clock" unique_id=920229380]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0.78431374, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6mmkj")
+theme_override_font_sizes/font_size = 127
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="clock/timer" unique_id=1169450495]
+autostart = true
+
+[node name="try_again_button" type="Button" parent="." unique_id=786239694]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 424.0
+offset_right = 680.0
+offset_bottom = 472.0
+theme_override_colors/font_color = Color(0.043137256, 0.039215688, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("2_7hir2")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6mmkj")
+text = "Try Again"
+
+[node name="stats_button" type="Button" parent="." unique_id=1479354572]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 488.0
+offset_right = 680.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0.043137256, 0.039215688, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("2_7hir2")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6mmkj")
+text = "Statistics"
+
+[node name="home_button" type="Button" parent="." unique_id=1352267868]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 552.0
+offset_right = 680.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0.043137256, 0.039215688, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("2_7hir2")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6mmkj")
+text = "Home"
+
+[connection signal="timeout" from="clock/timer/Timer" to="." method="_on_lose_timer_timeout"]
+[connection signal="pressed" from="try_again_button" to="." method="_on_lose_play_pressed"]
+[connection signal="pressed" from="home_button" to="." method="_on_lose_home_pressed"]

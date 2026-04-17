@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Game="*uid://b4me6d3oqnt27"
+GameState="*uid://yu2lq8jjmlir"
+GameTimer="*uid://dvbseebocrgkp"
 
 [input]
 
