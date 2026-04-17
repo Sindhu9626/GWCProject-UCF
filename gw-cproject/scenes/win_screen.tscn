@@ -114,6 +114,7 @@ theme_override_font_sizes/font_size = 25
 text = "Statistics"
 
 [node name="notes_button" type="Button" parent="." unique_id=1121616779]
+visible = false
 layout_mode = 0
 offset_left = 760.0
 offset_top = 480.0

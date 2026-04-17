@@ -12,8 +12,12 @@ func _on_lose_timer_timeout():
 
 # Button to home screen
 func _on_lose_home_pressed():
-	get_tree().change_scene_to_file("res://Title_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/Title_screen.tscn")
 
 # Button to play again
 func _on_lose_play_pressed():
-	get_tree().change_scene_to_file("res://game_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/notes_screen.tscn")
+
+
+func _on_stats_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/stats_screen.tscn")

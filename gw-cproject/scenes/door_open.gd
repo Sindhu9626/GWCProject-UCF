@@ -21,4 +21,5 @@ func _on_exit_body_entered(body: Node2D):
 		
 		# Save the final time
 		GameTimer.final_time = GameTimer.get_time_text()
+		GameTimer.save_final_time()
 		get_tree().change_scene_to_file("res://scenes/win_screen.tscn")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7p7ihbnh7rrc"]
 
-[ext_resource type="Script" uid="uid://dfmnpn1wqanuw" path="res://lose_screen.gd" id="1_6mmkj"]
+[ext_resource type="Script" uid="uid://dfmnpn1wqanuw" path="res://scripts/lose_screen.gd" id="1_6mmkj"]
 [ext_resource type="Texture2D" uid="uid://dnkpcj4cxdmtk" path="res://assets/timer.png" id="1_h3ym8"]
 [ext_resource type="FontFile" uid="uid://c3g6hgebo2myr" path="res://fonts/DigitalNumbers-Regular.ttf" id="2_6mmkj"]
 [ext_resource type="FontFile" uid="uid://bpww68kvlsu7g" path="res://fonts/PixelifySans-Regular.ttf" id="2_7hir2"]
@@ -55,10 +55,10 @@ autostart = true
 
 [node name="try_again_button" type="Button" parent="." unique_id=786239694]
 layout_mode = 0
-offset_left = 464.0
-offset_top = 424.0
-offset_right = 680.0
-offset_bottom = 472.0
+offset_left = 465.0
+offset_top = 436.0
+offset_right = 681.0
+offset_bottom = 484.0
 theme_override_colors/font_color = Color(0.043137256, 0.039215688, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("2_7hir2")
 theme_override_font_sizes/font_size = 20
@@ -66,6 +66,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_6mmkj")
 text = "Try Again"
 
 [node name="stats_button" type="Button" parent="." unique_id=1479354572]
+visible = false
 layout_mode = 0
 offset_left = 464.0
 offset_top = 488.0
@@ -80,9 +81,9 @@ text = "Statistics"
 [node name="home_button" type="Button" parent="." unique_id=1352267868]
 layout_mode = 0
 offset_left = 464.0
-offset_top = 552.0
+offset_top = 519.0
 offset_right = 680.0
-offset_bottom = 600.0
+offset_bottom = 567.0
 theme_override_colors/font_color = Color(0.043137256, 0.039215688, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("2_7hir2")
 theme_override_font_sizes/font_size = 20
@@ -91,4 +92,5 @@ text = "Home"
 
 [connection signal="timeout" from="clock/timer/Timer" to="." method="_on_lose_timer_timeout"]
 [connection signal="pressed" from="try_again_button" to="." method="_on_lose_play_pressed"]
+[connection signal="pressed" from="stats_button" to="." method="_on_stats_button_pressed"]
 [connection signal="pressed" from="home_button" to="." method="_on_lose_home_pressed"]
