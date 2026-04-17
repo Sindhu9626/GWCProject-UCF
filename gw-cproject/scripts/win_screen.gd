@@ -15,5 +15,5 @@ func _on_notes_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/notes_screen.tscn")
 
 #Button to stats screen
-func _on_stats_button_pressed() -> void:
-	pass # Replace with function body.
+func _on_stats_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/stats_screen.tscn")
